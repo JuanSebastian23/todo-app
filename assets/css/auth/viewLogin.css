@@ -158,8 +158,8 @@ body {
     position: absolute;
     width: 100%;
     left: 0;
-    top: 0;
-    padding: 2.5rem;
+    top: -30px;
+    padding: 0.5rem;
 }
 
 .tab-content.active {

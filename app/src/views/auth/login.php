@@ -79,16 +79,25 @@ include_once __DIR__ . '/../../../routes/dirs.php';
                         <!-- Formulario de Registro -->
                         <div class="tab-content" id="register">
                             <form action="/auth/register" method="POST" class="needs-validation" novalidate id="registerForm">
-                                <div class="mb-4">
-                                    <label class="form-label">Nombre completo</label>
+                                <div class="mb-3">
+                                    <label class="form-label">Nombre</label>
                                     <div class="input-group input-group-custom">
                                         <span class="input-group-text">
                                             <i class="bi bi-person-fill"></i>
                                         </span>
-                                        <input type="text" class="form-control" name="name" placeholder="Tu nombre" required>
+                                        <input type="text" class="form-control" name="first_name" placeholder="Tu nombre" required>
                                     </div>
                                 </div>
-                                <div class="mb-4">
+                                <div class="mb-3">
+                                    <label class="form-label">Apellido</label>
+                                    <div class="input-group input-group-custom">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-person-fill"></i>
+                                        </span>
+                                        <input type="text" class="form-control" name="last_name" placeholder="Tu apellido" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
                                     <label class="form-label">Correo electrónico</label>
                                     <div class="input-group input-group-custom">
                                         <span class="input-group-text">
@@ -97,7 +106,7 @@ include_once __DIR__ . '/../../../routes/dirs.php';
                                         <input type="email" class="form-control" name="email" placeholder="ejemplo@correo.com" required>
                                     </div>
                                 </div>
-                                <div class="mb-4">
+                                <div class="mb-3">
                                     <label class="form-label">Contraseña</label>
                                     <div class="input-group input-group-custom">
                                         <span class="input-group-text">
@@ -110,7 +119,7 @@ include_once __DIR__ . '/../../../routes/dirs.php';
                                     </div>
                                     <div class="invalid-feedback d-block" id="passwordError" style="display:none;"></div>
                                 </div>
-                                <div class="mb-4">
+                                <div class="mb-3">
                                     <label class="form-label">Confirmar contraseña</label>
                                     <div class="input-group input-group-custom">
                                         <span class="input-group-text">
@@ -123,7 +132,7 @@ include_once __DIR__ . '/../../../routes/dirs.php';
                                     </div>
                                     <div class="invalid-feedback d-block" id="confirmError" style="display:none;"></div>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100 py-3 mb-4">
+                                <button type="submit" class="btn btn-primary w-100 py-2 mb-3">
                                     <i class="bi bi-person-plus-fill me-2"></i>Registrarse
                                 </button>
 
