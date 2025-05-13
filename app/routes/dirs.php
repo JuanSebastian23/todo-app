@@ -57,12 +57,12 @@ if ($isLocal) {
     ini_set('error_log', LOG_PATH . 'production_errors.log');
 }
 
-// Función helper para generar URLs
+// Función helper para generar URLs absolutas
 function url($path = '') {
     return BASE_URL . '/' . ltrim($path, '/');
 }
 
-// Función helper para generar URLs de assets
+// Función helper para assets
 function asset($path = '') {
     return ASSETS_URL . '/' . ltrim($path, '/');
 }
