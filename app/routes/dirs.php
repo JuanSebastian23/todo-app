@@ -5,13 +5,10 @@ global $isLocal;
 // Detectar si estamos en entorno local o producción
 $isLocal = in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1']) || strpos($_SERVER['HTTP_HOST'], 'localhost') !== false;
 
-// Definir la URL base según el entorno
-if ($isLocal) {
-    define('BASE_URL', '/todo-app');
-} else {
-    // En producción, usar la URL del dominio
-    define('BASE_URL', 'https://juansedev.com');
-}
+// Definir la URL base según el entorno y quitar barra final
+$baseUrl = $isLocal ? '/todo-app' : 'https://juansedev.com';
+$baseUrl = rtrim($baseUrl, '/');
+define('BASE_URL', $baseUrl);
 
 // Definir la ruta raíz del proyecto
 define('ROOT_PATH', dirname(__DIR__, 2) . DIRECTORY_SEPARATOR);
