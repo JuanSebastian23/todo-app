@@ -11,7 +11,7 @@ echo "HTTP_HOST: " . $_SERVER['HTTP_HOST'] . "<br>";
 echo "isLocal: " . ($isLocal ? 'true' : 'false') . "<br>";
 
 // Definir la URL base según el entorno y quitar barra final
-$baseUrl = $isLocal ? '/todo-app' : 'https://juansedev.com/todo-app/public';
+$baseUrl = $isLocal ? '/todo-app' : 'https://juansedev.com/todo-app';
 $baseUrl = rtrim($baseUrl, '/');
 define('BASE_URL', $baseUrl);
 
