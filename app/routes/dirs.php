@@ -5,6 +5,11 @@ global $isLocal;
 // Detectar si estamos en entorno local o producción
 $isLocal = in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1']) || strpos($_SERVER['HTTP_HOST'], 'localhost') !== false;
 
+// Código de depuración temporal
+echo "REMOTE_ADDR: " . $_SERVER['REMOTE_ADDR'] . "<br>";
+echo "HTTP_HOST: " . $_SERVER['HTTP_HOST'] . "<br>";
+echo "isLocal: " . ($isLocal ? 'true' : 'false') . "<br>";
+
 // Definir la URL base según el entorno y quitar barra final
 $baseUrl = $isLocal ? '/todo-app' : 'https://juansedev.com/todo-app/public';
 $baseUrl = rtrim($baseUrl, '/');
